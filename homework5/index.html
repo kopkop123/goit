@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -26,36 +25,34 @@
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="wrapper">
-            <div class="content">
-                <div class="header">
-                    Cadastre-se
-                </div>
-                <div class="form-container">
-                    <form>
-                        <div class="fields-container">
-                            <a href="#">
-                                <img src="fb.png" alt="facebook">
-                            </a>
-                            <div class="separator">
-                                OU
-                            </div>
-                            <input type="text" class="input-item" placeholder="First Name">
-                            <input type="text" class="input-item" placeholder="Last Name">
-                            <input type="text" class="input-item" placeholder="Email Address">
-                            <input type="password" class="input-item" placeholder="Choose Password">
-                            <input type="password" class="input-item" placeholder="Password Confirm">
-                            <input type="checkbox" class="ch"><span class="ch-text">Send me Youbike updates and tips</span>
-                            
-                            <a href="#" class="create-button">Create my Account</a>
+    <div class="wrapper">
+        <div class="content">
+            <div class="header">
+                Cadastre-se
+            </div>
+            <div class="form-container">
+                <form name="registration_form" method="post">
+                    <div class="fields-container">
+                        <a href="#">
+                            <img src="img/fb.png" alt="facebook">
+                        </a>
+                        <div class="separator">
+                            OU
                         </div>
-                        <div class="policy">
-                        By clicking the button above, you agree to the Terms of Service
-                        Xiew our Privacy Policy.
-                   </div>
-                    </form>
-                </div>
+                        <input name="name_f" type="text" class="input-item" placeholder="First Name">
+                        <input name="name_l" type="text" class="input-item" placeholder="Last Name">
+                        <input name="mail" type="text" class="input-item" placeholder="Email Address">
+                        <input name="pass" type="password" class="input-item" placeholder="Choose Password">
+                        <input name="pass_r" type="password" class="input-item" placeholder="Password Confirm">
+                        <input name="update" type="checkbox" class="ch"><span class="ch-text">Send me Youbike updates and tips</span>
+
+                        <input name="create" type="submit" class="create-button" value="Create my Account">
+                    </div>
+                    <div class="policy">
+                    By clicking the button above, you agree to the Terms of Service
+                    Xiew our Privacy Policy.
+               </div>
+                </form>
             </div>
         </div>
     </div>

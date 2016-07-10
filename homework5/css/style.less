@@ -1,8 +1,8 @@
 @font-face {
     font-family: "Helvetica Neue";
-    src: url("helveticaneuecyr-thin.eot");
-    src: url("helveticaneuecyr-thin.woff") format("woff"),
-         url("helveticaneuecyr-thin.ttf") format("truetype");
+    src: url("../fonts/helveticaneuecyr-thin.eot");
+    src: url("../fonts/helveticaneuecyr-thin.woff") format("woff"),
+         url("../fonts/helveticaneuecyr-thin.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background: url(bg-header.png) 0 0 repeat-x;
+    background: url(../img/bg-header.png) 0 0 repeat-x;
     height: 36px;
 }
 
@@ -23,7 +23,10 @@ header {
 }
 
 .wrapper {
-    background: url(bg-content.jpg) 0 0 repeat-x;
+    background-image: url(../img/bg-content.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
     height: 1028px;
     position: relative;
 }
@@ -69,7 +72,7 @@ header {
     line-height: 36px;
     
     &::before {
-        background: url(flag.png) 0 0 no-repeat;
+        background: url(../img/flag.png) 0 0 no-repeat;
         width: 25px;
         height: 27px;
         content: '';
@@ -80,7 +83,7 @@ header {
 }
 
 .button {
-    background: url(button-bg.png) 0 0 no-repeat;
+    background: url(../img/button-bg.png) 0 0 no-repeat;
     line-height: 36px;
     box-sizing: border-box;
     text-decoration: none;
@@ -152,14 +155,14 @@ header {
     color: #fff;
     width: 100%;
     border: 0 none;
-    background: url(input-bg.png) 0 0 no-repeat;
+    background: url(../img/input-bg.png) 0 0 no-repeat;
     padding: 11px 19px;
     outline: 0;
     margin-bottom: 15px;
     box-sizing: border-box;
     
     &:focus {
-        background: url(input-bg-focus.png) center center no-repeat;
+        background: url(../img/input-bg-focus.png) center center no-repeat;
         box-shadow: 0 0 10px rgba(47, 123, 197, 1);
     }
 }
@@ -180,7 +183,7 @@ header {
 }
 
 .create-button {
-    background: url(create.png) 0 0 no-repeat;
+    background: url(../img/create.png) 0 0 no-repeat;
     display: block;
     margin: 20px auto;
     text-decoration: none;
@@ -189,6 +192,9 @@ header {
     height: 37px;
     line-height: 37px;
     text-align: center;
+    border: 0 none;
+    outline: 0;
+    cursor: pointer;
 }
 
 .policy {
