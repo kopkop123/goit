@@ -67,7 +67,14 @@ header {
     }
     
     .login {
-        margin-left: 4px;
+        margin-left: 2px;
+        border: 0 none;
+        background: none;
+        color: #fff;
+        cursor: pointer;
+        width: 28px;
+        height: 14px;
+        padding: 0;
     }
     
     .line {
@@ -245,7 +252,7 @@ main {
         nav {
             margin-left: 15px;
             
-            > li:nth-child(2) {
+            > ul > li:nth-child(2) {
                 margin-top: 8px;
                 
                 .part {
@@ -305,6 +312,10 @@ main {
         margin-bottom: 25px;
         text-align: center;
         
+        &:nth-child(6) {
+            margin-bottom: 26px;
+        }
+        
         .name {
             color: #206988;
             text-decoration: none;
@@ -313,8 +324,17 @@ main {
         
         .model {
             color: #1f2528;
-            font-size: 10pt;
+            font-size: 13.5px;
             margin-top: -2px;
+            margin-left: 6px;
+            
+            &.nokian {
+                margin-left: 5px;
+            }
+            
+            &.hankook {
+                margin-left: 0;
+            }
         }
         
         .item-container {
@@ -384,7 +404,7 @@ main {
         > li {
             > a {
                 color: #465961;
-                font-size: 10pt;
+                font-size: 13.5px;
                 line-height: 25px;
                 text-decoration: none;
             }
@@ -440,18 +460,39 @@ main {
 
 .brand-box {
     clear: both;
-    padding: 40px 0 20px;
-    text-align: center;
+    padding: 40px 0px 20px 86px;
     
     > a {
         margin-right: 13px;
         
         &:first-child {
             margin-left: 31px;
+            margin-right: 8px;
+        }
+        
+        &:nth-child(2) {
+            margin-right: 9px;
+        }
+        
+        &:nth-child(3) {
+            margin-right: 10px;
+        }
+        
+        &:nth-child(4),
+        &:nth-child(5) {
+            margin-right: 8px;
+        }
+        
+        &:nth-child(6) {
+            position: relative;
+            top: -4px;
+            margin-right: 9px;
         }
         
         &:last-child {
             margin-right: 0;
+            position: relative;
+            top: 4px;
         }
         
         img {
@@ -465,7 +506,7 @@ footer {
     border: 1px solid #242c3e;
     padding-top: 10px;
     padding-bottom: 50px;
-    text-align: center;
+    padding-left: 306px;
     
     a {
         color: #bec6c9;
@@ -495,12 +536,30 @@ footer {
                     display: none;
                 }
             }
+            
+            &:first-child {
+                margin-right: -3px;
+            }
+            
+            &:nth-child(2) {
+                margin-right: -5px;
+            }
         }
     }
     
     .rights {
         color: #7f4740;
         font-size: 8pt;
-        margin-top: 15px;
+        margin-top: 14px;
+        margin-left: 69px;
     }
+}
+
+.bonus {
+    border: 1px solid #b6b6b7;
+    border-radius: 17px;
+    height: 134px;
+    margin-top: 11px;
+    margin-left: 4px;
+    margin-right: 6px;
 }
