@@ -12,10 +12,114 @@ body {
 
 header {
     background: url(../img/header-bg.jpg) top center no-repeat;
-    height: 869px;
+    box-sizing: border-box;
+    height: 850px;
+    padding-top: 70px;
 }
 
 .container {
     box-sizing: border-box;
+    margin: 0 auto;
     width: 960px;
+}
+
+.logo {
+    float: left;
+}
+
+.menu {
+    float: right;
+    
+    &__item {
+        border-bottom: 2px solid transparent;
+        color: #fff;
+        display: inline-block;
+        font-family: 'League Gothic', sans-serif;
+        font-size: 18px;
+        margin-right: 40px;
+        padding-bottom: 6px;
+        padding-left: 7px;
+        padding-right: 5px;
+        text-decoration: none;
+        text-shadow: 2px 0 2px rgba(0, 0, 0, 0.4);
+        text-transform: uppercase;
+        
+        &:hover {
+            border-color: #edbfff;
+        }
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.slider {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    clear: both;
+    height: 400px;
+    margin-top: 170px;
+    text-shadow: 2px 0 2px rgba(0, 0, 0, 0.3);
+    
+    &__text-container {
+        float: left;
+        width: 505px;
+    }
+    
+    &__title {
+        font-size: 45px;
+    }
+    
+    &__sub-title {
+        color: #edbfff;
+        font-size: 23px;
+    }
+    
+    &__text {
+        font-size: 13px;
+    }
+    
+    &__control {
+        margin-top: 90px;
+        float: right;
+        margin-right: 160px;
+    }
+    
+    &__control-item {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50px;
+        display: inline-block;
+        height: 17px;
+        position: relative;
+        width: 17px;
+    }
+    
+    &__control-item--active {
+        &::after {
+            background: #fff;
+            display: block;
+            content: '';
+            border-radius: 50px;
+            position: absolute;
+            height: 11px;
+            top: 3px;
+            left: 3px;
+            width: 11px;
+        }
+    }
+}
+
+.about {
+    box-sizing: border-box;
+    border-bottom: 1px solid #0d151b;
+    border-top: 1px solid #33253a;
+    height: 340px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#745083+0,322539+100 */
+    background: rgb(116,80,131); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgb(116,80,131) 0%, rgb(50,37,57) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgb(116,80,131) 0%,rgb(50,37,57) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgb(116,80,131) 0%,rgb(50,37,57) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#745083', endColorstr='#322539',GradientType=0 ); /* IE6-9 */
 }
