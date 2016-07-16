@@ -21,6 +21,12 @@ header {
     box-sizing: border-box;
     margin: 0 auto;
     width: 960px;
+    
+    &--shadow {
+        background: url(../img/shadow.png) bottom center no-repeat;
+        width: 976px;
+        height: 355px;
+    }
 }
 
 .logo {
@@ -122,4 +128,77 @@ header {
     background: -webkit-linear-gradient(top,  rgb(116,80,131) 0%,rgb(50,37,57) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgb(116,80,131) 0%,rgb(50,37,57) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#745083', endColorstr='#322539',GradientType=0 ); /* IE6-9 */
+    
+    &__item {
+        color: #fff;
+        float: left;
+        margin-left: 55px;
+        text-shadow: 1px 0 0 #0f1518;
+        width: 235px;
+    }
+    
+    &__title {
+        position: relative;
+        font-family: 'League Gothic', sans-serif;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    
+    &__text {
+        font-size: 11px;
+    }
+    
+    &__more {
+        color: #fff;
+        font-family: 'League Gothic', sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        
+        &:hover {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+    }
+    
+    &--key {
+        &::before {
+            background: url(../img/about.png) 0 0 no-repeat;
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 30px;
+            height: 31px;
+            left: -50px;
+            top: 5px;
+        }
+    }
+    
+    &--msg {
+        &::before {
+            background: url(../img/about.png) 0 -31px no-repeat;
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 33px;
+            height: 29px;
+            left: -50px;
+            top: 5px;
+        }
+    }
+    
+    &--music {
+        &::before {
+            background: url(../img/about.png) 0 -60px no-repeat;
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 29px;
+            height: 31px;
+            left: -50px;
+            top: 5px;
+        }
+    }
+}
+
+.testimonials {
+    background-color: #f9f9f9;
 }

@@ -20,6 +20,11 @@ header {
   margin: 0 auto;
   width: 960px;
 }
+.container--shadow {
+  background: url(../img/shadow.png) bottom center no-repeat;
+  width: 976px;
+  height: 355px;
+}
 .logo {
   float: left;
 }
@@ -109,4 +114,62 @@ header {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#745083', endColorstr='#322539', GradientType=0);
   /* IE6-9 */
+}
+.about__item {
+  color: #fff;
+  float: left;
+  margin-left: 55px;
+  text-shadow: 1px 0 0 #0f1518;
+  width: 235px;
+}
+.about__title {
+  position: relative;
+  font-family: 'League Gothic', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.about__text {
+  font-size: 11px;
+}
+.about__more {
+  color: #fff;
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.about__more:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+.about--key::before {
+  background: url(../img/about.png) 0 0 no-repeat;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  height: 31px;
+  left: -50px;
+  top: 5px;
+}
+.about--msg::before {
+  background: url(../img/about.png) 0 -31px no-repeat;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 33px;
+  height: 29px;
+  left: -50px;
+  top: 5px;
+}
+.about--music::before {
+  background: url(../img/about.png) 0 -60px no-repeat;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 29px;
+  height: 31px;
+  left: -50px;
+  top: 5px;
+}
+.testimonials {
+  background-color: #f9f9f9;
 }
