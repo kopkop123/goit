@@ -194,31 +194,33 @@
                    <img src="img/catalog.png" alt="catalog">
                     Бренды:
                 </div>
-                <nav>
-                    <ul>
-                        <li>
-                           <div class="part">
-                               <span class="donut"></span>Шины
-                           </div>
-                            <ul class="submenu">
-                                <li><input type="checkbox"> Бренд 1</li>
-                                <li><input type="checkbox"> Бренд 2</li>
-                                <li><input type="checkbox"> Бренд 3</li>
-                            </ul>
-                        </li>
-                        <li>
-                           <div class="part">
-                               <span class="donut"></span>Диски
-                           </div>
-                            <ul class="submenu">
-                                <li><input type="checkbox"> Бренд 1</li>
-                                <li><input type="checkbox"> Бренд 2</li>
-                                <li><input type="checkbox"> Бренд 3</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <a href="#" class="button-choose">Выбрать</a>
+                <form name="checkbox_form">
+                    <nav>
+                        <ul>
+                            <li>
+                               <div class="part">
+                                   <span class="donut"></span>Шины
+                               </div>
+                                <ul class="submenu">
+                                    <li><label><input type="checkbox"> Бренд 1</label></li>
+                                    <li><label><input type="checkbox"> Бренд 2</label></li>
+                                    <li><label><input type="checkbox"> Бренд 3</label></li>
+                                </ul>
+                            </li>
+                            <li>
+                               <div class="part">
+                                   <span class="donut"></span>Диски
+                               </div>
+                                <ul class="submenu">
+                                    <li><label><input type="checkbox"> Бренд 1</label></li>
+                                    <li><label><input type="checkbox"> Бренд 2</label></li>
+                                    <li><label><input type="checkbox"> Бренд 3</label></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <input type="submit" class="button-choose" value="Выбрать">
+                </form>
             </aside>
         </main>
         
