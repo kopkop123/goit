@@ -5,6 +5,13 @@
     src: url("../fonts/League_Gothic.woff") format('woff');
 }
 
+.border-box {
+    ms-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -12,13 +19,13 @@ body {
 
 header {
     background: url(../img/header-bg.jpg) top center no-repeat;
-    box-sizing: border-box;
+    .border-box;
     height: 846px;
     padding-top: 51px;
 }
 
 .container {
-    box-sizing: border-box;
+    .border-box;
     margin: 0 auto;
     width: 960px;
     
@@ -115,7 +122,7 @@ header {
 }
 
 .slider {
-    box-sizing: border-box;
+    .border-box;
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
     clear: both;
@@ -170,13 +177,13 @@ header {
             
             .slider__control-item {
                 border: 1px solid #e8e8e8;
-                box-sizing: border-box;
+                .border-box;
                 background-color: #fff;
                 height: 19px;
                 width: 19px;
                 
                 &--active {
-                    &::after {
+                    &:after {
                         background: #515151;
                         display: block;
                         content: '';
@@ -190,7 +197,7 @@ header {
                 }
                 
                 &:hover {
-                    &::after {
+                    &:after {
                         background: #515151;
                         display: block;
                         content: '';
@@ -227,7 +234,7 @@ header {
         }
         
         &:hover {
-            &::after {
+            &:after {
                 background: #fff;
                 display: block;
                 content: '';
@@ -242,7 +249,7 @@ header {
     }
     
     &__control-item--active {
-        &::after {
+        &:after {
             background: #fff;
             display: block;
             content: '';
@@ -257,7 +264,7 @@ header {
 }
 
 .about {
-    box-sizing: border-box;
+    .border-box;
     border-bottom: 1px solid #0d151b;
     border-top: 1px solid #33253a;
     height: 342px;
@@ -323,7 +330,7 @@ header {
     }
     
     &--key {
-        &::before {
+        &:before {
             background: url(../img/about.png) 0 0 no-repeat;
             content: '';
             display: inline-block;
@@ -336,7 +343,7 @@ header {
     }
     
     &--msg {
-        &::before {
+        &:before {
             background: url(../img/about.png) 0 -31px no-repeat;
             content: '';
             display: inline-block;
@@ -349,7 +356,7 @@ header {
     }
     
     &--music {
-        &::before {
+        &:before {
             background: url(../img/about.png) 0 -60px no-repeat;
             content: '';
             display: inline-block;
@@ -375,9 +382,9 @@ header {
         box-shadow: 1px 0 2px rgba(0, 0, 0, 0.05);
         position: relative;
         float: left;
-        box-sizing: border-box;
+        .border-box;
         
-        &::after {
+        &:after {
             content: '';
             display: block;
             width: 0;
@@ -390,7 +397,7 @@ header {
             right: 40px;
         }
         
-        &::before {
+        &:before {
             content: '';
             display: block;
             width: 0;
@@ -412,7 +419,7 @@ header {
         text-transform: uppercase;
         margin-left: 23px;
         
-        &::before {
+        &:before {
             background: url(../img/user.png) 0 0 no-repeat;
             content: '';
             display: block;
@@ -547,7 +554,7 @@ header {
     background-color: #ececec;
     height: 395px;
     padding-top: 98px;
-    box-sizing: border-box;
+    .border-box;
     
     &__item {
         float: left;
@@ -599,7 +606,7 @@ footer {
     clear: both;
     height: 114px;
     padding-top: 47px;
-    box-sizing: border-box;
+    .border-box;
 }
 
 .design {
@@ -734,12 +741,12 @@ footer {
             margin-top: 9px;
         }
         
-        &--key::before {
+        &--key:before {
             top: 1px;    
         }
             
         &--msg {
-            &::before {
+            &:before {
                 background: url(../img/about.png) 0 0 no-repeat;
                 content: '';
                 display: inline-block;
@@ -752,7 +759,7 @@ footer {
         }
     
         &--music {
-            &::before {
+            &:before {
                 background: url(../img/about.png) 0 0 no-repeat;
                 content: '';
                 display: inline-block;
@@ -776,8 +783,8 @@ footer {
             padding: 27px 23px 40px 17px;
             margin-left: 23px;
             
-            &::after,
-            &::before {
+            &:after,
+            &:before {
                 display: none;
             }
         }
@@ -945,7 +952,7 @@ footer {
         position: absolute;
         width: 246px;
         margin: 20px auto 0;
-        box-sizing: border-box;
+        .border-box;
         box-shadow: 3px 0 5px rgba(0, 0, 0, 0.2);
         background-color: rgba(54, 41, 62, 0.9);
         left: 50%;
@@ -973,7 +980,7 @@ footer {
                     border-radius: 10px 10px 0 0;
                     padding-top: 14px;
 
-                    &::after {
+                    &:after {
                         content: '';
                         display: block;
                         position: absolute;
@@ -991,7 +998,7 @@ footer {
                     background-color: rgba(0, 0, 0, 0.3);
                     padding-top: 8px;
 
-                    &::after {
+                    &:after {
                         content: '';
                         display: block;
                         position: absolute;
@@ -1343,7 +1350,7 @@ footer {
             font-size: 23.2px;
             margin-left: 20px;
             
-            &::before {
+            &:before {
                 left: -60px;
                 top: -7px;
             }
