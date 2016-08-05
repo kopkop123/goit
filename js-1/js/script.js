@@ -2,9 +2,13 @@ function pow() {
     var a = prompt('Введите число', '');
     var b = prompt('Введите степень', '');
     
-    var result = Math.pow(a, b);
+    var r = a;
+
+    for (var i = 1; i < b; i++) {
+        r *= a;
+    }
     
-    console.log(result);
+    console.log(r);
 }
 
 pow();
@@ -18,7 +22,9 @@ function enter() {
     var user = prompt('Введите имя пользователя', '');
     
     for (var i = 0; i < arr.length; i++) {
-        if (user === arr[i]) {
+        if (user === null) {
+            return;
+        } else if (user === arr[i]) {
             alert(user + ' вы успешно вошли');
             break;
         }  else {
