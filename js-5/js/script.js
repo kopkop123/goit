@@ -22,11 +22,11 @@ function timer () {
     
     var s_interval = setInterval(function() {
         m_s++;
-        if (m_s <= 99) {
+        if (m_s <= 9) {
             m_s = '00' + m_s;
         }
         
-        if (m_s > 99) {
+        if (m_s > 9 && m_s < 100) {
             m_s = '0' + m_s;
         }
         
