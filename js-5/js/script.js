@@ -1,92 +1,79 @@
-var h = document.getElementById("hours");
-var m = document.getElementById("minutes");
-var s = document.getElementById("seconds");
-var m_s = document.getElementById("m_seconds");
-
-h = 0;
-m = 0;
-s = 0;
-m_s = 0;
-
-function timer () {
-    var start = document.getElementById("start");
-    var pause = document.getElementById("pause");
-    var clear = document.getElementById("clear");
-
+$(function() {
+    var link1 = $('#link-1');
+    var link2 = $('#link-2');
+    var link3 = $('#link-3');
+    var tab1 = $('#tab-1');
+    var tab2 = $('#tab-2');
+    var tab3 = $('#tab-3');
     
-    h.innerHTML = '00';
-    m.innerHTML = '00';
-    s.innerHTML = '00';
-    m_s.innerHTML = '00';
-
+    link1.on('click', function(){
+        $(this).addClass('active');
+        link2.removeClass('active');
+        link3.removeClass('active');
+        tab1.show();
+        tab2.hide();
+        tab3.hide();
+    });
     
-    var s_interval = setInterval(function() {
-        m_s++;
-        if (m_s <= 9) {
-            m_s = '00' + m_s;
-        }
-        
-        if (m_s > 9 && m_s < 100) {
-            m_s = '0' + m_s;
-        }
-        
-        if (m_s == 1000) {
-            s++;
-            if (s < 10) {
-                s = '0' + s;
-            }
-            document.getElementById("seconds").innerHTML = s;
-            m_s = 0;
-        }
-        
-        if (s == 59) {
-            m++;
-            if (m < 10) {
-                m = '0' + m;
-            }
-            document.getElementById("minutes").innerHTML = m;
-            s = 0;
-            s = '0' + s;
-        }
-        
-        if (m == 59) {
-            h++;
-            if (h < 10) {
-                h = '0' + h;
-            }
-            
-            document.getElementById("hours").innerHTML = h;
-            m = 0;
-            m = '0' + m;
-        }
-         
-        document.getElementById("m_seconds").innerHTML = m_s;
-    }, 1);
+    link2.on('click', function(){
+        $(this).addClass('active');
+        link1.removeClass('active');
+        link3.removeClass('active');
+        tab2.show();
+        tab1.hide();
+        tab3.hide();
+    });
     
-    pause.onclick = function() {
-        clearInterval(s_interval);
-        this.classList.add("none");
-        start.classList.remove("none");
-        console.log(s);
-    };
+    link3.on('click', function(){
+        $(this).addClass('active');
+        link2.removeClass('active');
+        link1.removeClass('active');
+        tab3.show();
+        tab2.hide();
+        tab1.hide();
+    });
     
-    clear.onclick = function() {
-        clearInterval(s_interval);
-        start.classList.remove("none");
-        pause.classList.add("none");
-        h = 0;
-        m = 0;
-        s = 0;
-        m_s = 0;
-        document.getElementById("seconds").innerHTML = '00';
-        document.getElementById("minutes").innerHTML = '00';
-        document.getElementById("hours").innerHTML = '00';
-        document.getElementById("m_seconds").innerHTML = '00';
-    };
-}
-
-start.onclick = function() {
-    timer();
-    this.classList.add("none");
-    pause.classList.remove("none");
-};
+    var firstname = $('#firstname');
+    var lastname = $('#lastname');
+    var address = $('#address');
+    var tooltip = $('.tooltip');
+    
+    firstname.on('focus', function(){
+        tooltip.slideUp();
+       $(this).next(tooltip).slideDown();
+    });
+    
+    firstname.on('mouseover', function(){
+       $(this).next(tooltip).slideDown();
+    });
+    
+    firstname.on('mouseleave', function(){
+       $(this).next(tooltip).slideUp();
+    });
+    
+    lastname.on('focus', function(){
+        tooltip.slideUp();
+       $(this).next(tooltip).slideDown();
+    });
+    
+    lastname.on('mouseover', function(){
+       $(this).next(tooltip).slideDown();
+    });
+    
+    lastname.on('mouseleave', function(){
+       $(this).next(tooltip).slideUp();
+    });
+    
+    address.on('focus', function(){
+        tooltip.slideUp();
+       $(this).next(tooltip).slideDown();
+    });
+    
+    address.on('mouseover', function(){
+       $(this).next(tooltip).slideDown();
+    });
+    
+    address.on('mouseleave', function(){
+       $(this).next(tooltip).slideUp();
+    });
+});
