@@ -36,4 +36,14 @@ $(function() {
     
     $('.basic').fancySelect();
 
+    
+    $( '.dropdown' ).hover(
+        function(){
+            $(this).children('.sub-menu').show();
+        },
+        function(){
+            $(this).children('.sub-menu').hide();
+        }
+    );
+
 });

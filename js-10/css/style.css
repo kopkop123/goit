@@ -309,3 +309,99 @@ background-position: 0 -34px;
 .css-checkbox[type=checkbox]:checked + .css-label:hover:after {
 background-position: 0 -51px;
 }
+
+
+.menu-container {
+    background: green;
+    margin-bottom: 500px;
+}
+
+.menu {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.menu > li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.link {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.menu li.dropdown > a {
+    background-image: url('../img/arrow-down.png');
+    background-position: right 23px;
+    background-repeat: no-repeat;
+}
+
+.menu a {
+    line-height: 40px;
+}
+
+.menu li ul {
+    background-color: lightgreen;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 200px;
+}
+
+.sub-menu {
+    display: none;
+    transition: all 1s linear;
+}
+
+.sub-menu:hover {
+    background-color: #99CCFF;
+}
+
+.sub-menu li {
+    list-style: none;
+}
+
+.sub-menu li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu li li {
+    position: relative;
+    margin: 0;
+    display: block;
+}
+
+.menu li li a {
+    border-bottom: solid 1px #000;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.menu li li.dropdown > a {
+    background-image: url('../img/arrow-right.png');
+    background-position: right 16px;
+    background-repeat: no-repeat;
+}
+
+.menu li li ul {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    margin: 0;
+}
+
+.menu li li:last-child a {
+    border-bottom: none;
+}
+
+.menu a:hover,
+.menu a:focus,
+.menu a:active {
+    color:rgb(50,50,50);
+}
