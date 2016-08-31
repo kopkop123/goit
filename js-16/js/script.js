@@ -6,7 +6,7 @@ $(function() {
         $.getJSON(URL, function(data){
             if (parseInt(data.totalHits) > 0)
                 $.each(data.hits, function(i, hit){ 
-                    $('.result').append('<a class="img-result" target="_blank" href="' + hit.pageURL + '"><img src="' + hit.previewURL + '"></a>');
+                    $('.result').append('<a class="img-result" target="_blank" href="' + hit.pageURL + '" title="' + hit.pageURL + '"><img src="' + hit.previewURL + '"></a>');
                 });
             else
                 console.log('No hits');
