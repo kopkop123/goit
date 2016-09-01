@@ -11,15 +11,3 @@ form {
     text-align: center;
     margin-top: 30px;
 }
-
-.img-result img {
-    width: 150px;
-    height: 100px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.result {
-    padding: 20px;
-    text-align: center;
-}
