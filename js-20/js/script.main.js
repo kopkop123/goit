@@ -356,4 +356,9 @@ $(function(){
     
     
     $('.bxslider').bxSlider();
+    
+    $('.banner__accordion').on('click', function(){
+        $(this).toggleClass('banner__accordion--open');
+        $(this).next('.banner__text').slideToggle();
+    });
 });

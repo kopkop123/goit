@@ -1,0 +1,22 @@
+@mixin dib {
+    display: inline-block;
+}
+
+@mixin db {
+    display: block;
+}
+
+@mixin vam {
+    vertical-align: middle;
+}
+
+@mixin vat {
+    vertical-align: top;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {color:$c-placeholder;}
+    &::-moz-placeholder          {color:$c-placeholder;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:$c-placeholder;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:$c-placeholder;}
+}

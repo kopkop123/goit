@@ -12,9 +12,30 @@
   .logo-container__social {
     float: right;
     margin-top: 13px; }
-    .logo-container__social__item {
-      margin-left: 18px;
-      vertical-align: middle; }
+  .logo-container__item {
+    margin-left: 18px;
+    display: inline-block;
+    vertical-align: middle; }
+    .logo-container__item--fb {
+      background: url(../img/sprite.png) -139px -1px no-repeat;
+      height: 16px;
+      width: 8px; }
+    .logo-container__item--twitter {
+      background: url(../img/sprite.png) -161px -4px no-repeat;
+      height: 13px;
+      width: 17px; }
+    .logo-container__item--rss {
+      background: url(../img/sprite.png) -51px -1px no-repeat;
+      height: 15px;
+      width: 15px; }
+    .logo-container__item--in {
+      background: url(../img/sprite.png) -80px 0px no-repeat;
+      height: 15px;
+      width: 16px; }
+    .logo-container__item--skype {
+      background: url(../img/sprite.png) -108px 0px no-repeat;
+      height: 16px;
+      width: 16px; }
 
 .navigation {
   background-color: #2a2d32;
@@ -23,8 +44,8 @@
   .navigation__search {
     float: right;
     border: 1px solid #181a1d;
-    background: url(../img/search.png) 215px center no-repeat #35383c;
-    color: #626466;
+    background: url(../img/sprite.png) 215px 12px no-repeat #35383c;
+    color: #fff;
     width: 240px;
     height: 40px;
     outline: none;
@@ -82,7 +103,21 @@
     vertical-align: top;
     width: 265px; }
   .advantage__image {
+    display: inline-block;
+    vertical-align: top;
     margin-bottom: 15px; }
+    .advantage__image--setting {
+      background: url(../img/sprite.png) -41px -29px no-repeat;
+      width: 32px;
+      height: 32px; }
+    .advantage__image--params {
+      background: url(../img/sprite.png) -92px -26px no-repeat;
+      width: 32px;
+      height: 32px; }
+    .advantage__image--truck {
+      background: url(../img/sprite.png) -139px -32px no-repeat;
+      width: 32px;
+      height: 26px; }
   .advantage__title {
     margin-bottom: 25px;
     color: #2a2b2e;
@@ -100,16 +135,16 @@
       width: 10px;
       height: 9px;
       content: '';
-      background: url(../img/more-arrow.png) 0 0 no-repeat;
+      background: url(../img/sprite.png) 0 -70px no-repeat;
       margin-left: 9px;
       vertical-align: baseline; }
     .advantage__link:hover {
       color: #248cec; }
       .advantage__link:hover:after {
-        background: url(../img/more-arrow.png) 0 -11px no-repeat; }
-  .advantage__power-inside {
+        background: url(../img/sprite.png) 0 -81px no-repeat; }
+  .advantage__power {
     margin-right: 30px; }
-  .advantage__new-technologies {
+  .advantage__technologies {
     margin-right: 30px; }
 
 .services {
@@ -203,7 +238,8 @@
     color: #2a2d32;
     text-transform: uppercase;
     background: #fff;
-    margin-top: 5px; }
+    margin-top: 5px;
+    cursor: pointer; }
     .banner__accordion:first-child {
       margin-top: 0; }
     .banner__accordion--open {
@@ -212,6 +248,10 @@
       color: #fff; }
       .banner__accordion--open .banner__left {
         border-right: 1px solid #f6c53d; }
+        .banner__accordion--open .banner__left--open {
+          display: inline-block; }
+        .banner__accordion--open .banner__left--close {
+          display: none; }
   .banner__left {
     float: left;
     width: 34px;
@@ -220,13 +260,16 @@
     line-height: 40px;
     text-align: center;
     font-size: 12px; }
+    .banner__left--open {
+      display: none; }
   .banner__right {
     margin-left: 46px;
     line-height: 40px; }
   .banner__text {
     width: 550px;
     padding: 25px 0 35px 40px;
-    color: #8a8a8a; }
+    color: #8a8a8a;
+    display: none; }
 
 .partners {
   text-align: center;
@@ -268,13 +311,31 @@
   background: #35383c;
   color: #6f7073;
   line-height: 60px; }
+  .footer a {
+    color: #6f7073;
+    text-decoration: none; }
   .footer > .container > div {
     display: inline-block; }
-    .footer > .container > div img {
-      margin-right: 10px;
-      vertical-align: middle; }
   .footer__phone {
     margin-left: 30px;
     margin-right: 40px; }
   .footer__rights {
     float: right; }
+  .footer--location {
+    background: url(../img/sprite.png) -73px -74px no-repeat;
+    width: 12px;
+    height: 16px;
+    margin-right: 10px;
+    display: inline-block; }
+  .footer--phone {
+    background: url(../img/sprite.png) -103px -74px no-repeat;
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    display: inline-block; }
+  .footer--mail {
+    background: url(../img/sprite.png) -131px -76px no-repeat;
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    display: inline-block; }

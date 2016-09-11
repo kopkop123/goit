@@ -17,11 +17,11 @@
        <div class="logo-container">
            <a href="#"><img src="img/logo.png" alt="logo"></a>
            <div class="logo-container__social">
-               <a class="logo-container__social__item" href="#"><img src="img/fb.png" alt="fb"></a>
-               <a class="logo-container__social__item" href="#"><img src="img/twitter.png" alt="fb"></a>
-               <a class="logo-container__social__item" href="#"><img src="img/rss.png" alt="fb"></a>
-               <a class="logo-container__social__item" href="#"><img src="img/ln.png" alt="fb"></a>
-               <a class="logo-container__social__item" href="#"><img src="img/skype.png" alt="fb"></a>
+               <a class="logo-container__item logo-container__item--fb" href="#"></a>
+               <a class="logo-container__item logo-container__item--twitter" href="#"></a>
+               <a class="logo-container__item logo-container__item--rss" href="#"></a>
+               <a class="logo-container__item logo-container__item--in" href="#"></a>
+               <a class="logo-container__item logo-container__item--skype" href="#"></a>
            </div>
        </div>
     </div>
@@ -48,12 +48,10 @@
     </div>
     <div class="container">
         <section class="advantage">
-            <div class="advantage__power-inside">
+            <div class="advantage__power">
                 <div class="advantage__count">01</div>
                 <div class="advantage__info">
-                    <div class="advantage__image">
-                        <img src="img/setting.png" alt="power">
-                    </div>
+                    <div class="advantage__image advantage__image--setting"></div>
                     <div class="advantage__title">
                         Power Inside
                     </div>
@@ -66,12 +64,10 @@
                 </div>
             </div>
             
-            <div class="advantage__new-technologies">
+            <div class="advantage__technologies">
                 <div class="advantage__count">02</div>
                 <div class="advantage__info">
-                    <div class="advantage__image">
-                        <img src="img/paarams.png" alt="params">
-                    </div>
+                    <div class="advantage__image advantage__image--params"></div>
                     <div class="advantage__title">
                         New Technologies
                     </div>
@@ -84,12 +80,10 @@
                 </div>
             </div>
             
-            <div class="advantage__fast-support">
+            <div class="advantage__support">
                 <div class="advantage__count">03</div>
                 <div class="advantage__info">
-                    <div class="advantage__image">
-                        <img src="img/truck.png" alt="truck">
-                    </div>
+                    <div class="advantage__image advantage__image--truck"></div>
                     <div class="advantage__title">
                         Fast Support
                     </div>
@@ -167,25 +161,34 @@
                 <div class="banner__title">
                     Banners Place
                 </div>
-                <div class="banner__accordion banner__accordion--open">
-                    <div class="banner__left">&mdash;</div>
+                <div class="banner__accordion">
+                    <div class="banner__left"><span class="banner__left--open">&mdash;</span><span class="banner__left--close">+</span></div>
                     <div class="banner__right">Accordion Panel 1</div>
                 </div>
                 <p class="banner__text">
                     Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur
                 </p>
                 <div class="banner__accordion">
-                    <div class="banner__left">+</div>
+                    <div class="banner__left"><span class="banner__left--open">&mdash;</span><span class="banner__left--close">+</span></div>
                     <div class="banner__right">Accordion Panel 2</div>
                 </div>
+                <p class="banner__text">
+                    Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur
+                </p>
                 <div class="banner__accordion">
-                    <div class="banner__left">+</div>
+                    <div class="banner__left"><span class="banner__left--open">&mdash;</span><span class="banner__left--close">+</span></div>
                     <div class="banner__right">Accordion Panel 3</div>
                 </div>
+                <p class="banner__text">
+                    Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur
+                </p>
                 <div class="banner__accordion">
-                    <div class="banner__left">+</div>
+                    <div class="banner__left"><span class="banner__left--open">&mdash;</span><span class="banner__left--close">+</span></div>
                     <div class="banner__right">Accordion Panel 4</div>
                 </div>
+                <p class="banner__text">
+                    Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur
+                </p>
             </div>
         </div>
     </section>
@@ -268,13 +271,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__city">
-                <img src="img/location.png" alt="location"> BuildHomeLtd.  Street Name 123   23 45 Cityname
+                <span class="footer--location"></span> BuildHomeLtd.  Street Name 123   23 45 Cityname
             </div>
             <div class="footer__phone">
-                <img src="img/phone.png" alt="phone"> +123 900 123 456
+                <span class="footer--phone"></span> <a href="tel:+123900123456">+123 900 123 456</a>
             </div>
             <div class="footer__mail">
-                <img src="img/mail.png" alt="mail"> info@buildhome.web
+                <span class="footer--mail"></span> <a href="mail:info@buildhome.web">info@buildhome.web</a>
             </div>
             <div class="footer__rights">
                 © 2014 Build Home

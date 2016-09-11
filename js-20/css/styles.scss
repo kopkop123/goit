@@ -1,3 +1,6 @@
+@import 'variable';
+@import 'mixins';
+
 * {
     margin: 0;
     padding: 0;
@@ -15,24 +18,55 @@
     &__social {
         float: right;
         margin-top: 13px;
-        
-        &__item {
-            margin-left: 18px;
-            vertical-align: middle;
+    }
+    
+    &__item {
+        margin-left: 18px;
+        @include dib;
+        @include vam;
+
+        &--fb {
+            background: $sprite -139px -1px $nr;
+            height: 16px;
+            width: 8px;
+        }
+
+        &--twitter {
+            background: $sprite -161px -4px $nr;
+            height: 13px;
+            width: 17px;
+        }
+
+        &--rss {
+            background: $sprite -51px -1px $nr;
+            height: 15px;
+            width: 15px;
+        }
+
+        &--in {
+            background: $sprite -80px 0px $nr;
+            height: 15px;
+            width: 16px;
+        }
+
+        &--skype {
+            background: $sprite -108px 0px $nr;
+            height: 16px;
+            width: 16px;
         }
     }
 }
 
 .navigation {
-    background-color: #2a2d32;
+    background-color: $c-back;
     height: 56px;
     margin-bottom: 40px;
     
     &__search {
         float: right;
-        border: 1px solid #181a1d;
-        background: url(../img/search.png) 215px center no-repeat #35383c;
-        color: #626466;
+        border: 1px solid $c-border;
+        background: $sprite 215px 12px $nr $c-search;
+        color: $c-white;
         width: 240px;
         height: 40px;
         outline: none;
@@ -40,10 +74,7 @@
         margin-right: 8px;
         padding: 0 27px 0 12px;
         
-        &::-webkit-input-placeholder {color:#626466;}
-        &::-moz-placeholder          {color:#626466;}/* Firefox 19+ */
-        &:-moz-placeholder           {color:#626466;}/* Firefox 18- */
-        &:-ms-input-placeholder      {color:#626466;}
+        @include placeholder;
     }
 }
 
@@ -52,7 +83,7 @@
     
     &__item {
         list-style: none;
-        display: inline-block;
+        @include dib;
         height: 56px;
         border-right: 1px solid #181a1d;
         text-transform: uppercase;
@@ -62,16 +93,16 @@
             cursor: pointer;
             
             .menu__link {
-                color: #f4b60d;
+                color: $c-link;
             }
         }
         
         &--active {
-            background-color: #248cec;
+            background-color: $c-link-active;
             
             &:hover {
                 .menu__link {
-                    color: #fff;
+                    color: $c-white;
                 }
             }
         }
@@ -79,7 +110,7 @@
     
     &__link {
         text-decoration: none;
-        color: #fff;
+        color: $c-white;
         display: block;
         line-height: 56px;
         padding: 0 38px;
@@ -94,73 +125,93 @@
     }
     
     &__count {
-        color: #e9e9ea;
+        color: $c-count;
         font-size: 90px;
-        display: inline-block;
+        @include dib;
         vertical-align: top;
         line-height: 62px;
         margin-right: 5px;
     }
     
     &__info {
-        display: inline-block;
-        vertical-align: top;
+        @include dib;
+        @include vat;
         width: 265px;
     }
     
     &__image {
+        @include dib;
+        @include vat;
         margin-bottom: 15px;
+        
+        &--setting {
+            background: $sprite -41px -29px $nr;
+            width: 32px;
+            height: 32px;
+        }
+        
+        &--params {
+            background: $sprite -92px -26px $nr;
+            width: 32px;
+            height: 32px;
+        }
+        
+        &--truck {
+            background: $sprite -139px -32px $nr;
+            width: 32px;
+            height: 26px;
+        }
     }
     
     &__title {
         margin-bottom: 25px;
-        color: #2a2b2e;
+        color: $c-title;
         font-size: 20px;
     }
     
     &__body {
-        color: #8a8a8a;
+        color: $c-body;
         margin-bottom: 25px;
     }
     
     &__link {
         text-decoration: none;
-        color: #2a2b2e;
+        color: $c-title;
         font-size: 13px;
         font-weight: bold;
         
         &:after {
-            display: inline-block;
+            @include dib;
             width: 10px;
             height: 9px;
             content: '';
-            background: url(../img/more-arrow.png) 0 0 no-repeat;
+            background: $sprite 0 -70px $nr;
             margin-left: 9px;
             vertical-align: baseline;
         }
         
         &:hover {
-            color: #248cec;
+            color: $c-link-active;
             
             &:after {
-                background: url(../img/more-arrow.png) 0 -11px no-repeat;
+                background: $sprite 0 -81px $nr;
             }
         }
     }
     
-    &__power-inside {
+    &__power {
         margin-right: 30px;
     }
     
-    &__new-technologies {
+    &__technologies {
         margin-right: 30px;
     }
 }
 
 .services {
     padding: 50px 0 65px 0;
-    background-color: #2a2d32;
-    color: #fff;
+    background-color: $c-back;
+    color: $c-white;
     
     &__title {
         font-size: 24px;
@@ -169,15 +220,15 @@
     
     &__item {
         width: 260px;
-        display: inline-block;
+        @include dib;
         text-align: center;
         position: relative;
         text-decoration: none;
-        color: #fff;
+        color: $c-white;
         margin-right: 35px;
         
         &:hover {
-            color: #f4b60d;
+            color: $c-link;
             
             .services__layer {
                 display: block;
@@ -198,28 +249,28 @@
         height: 260px;
         padding-top: 100px;
         font-size: 60px;
-        color: #fff;
+        color: $c-white;
         display: none;
     }
     
     &__name {
         margin-top: 30px;
-        display: block;
+        @include db;
     }
 }
 
 .news-container {
-    background: #f7f7f7;
+    background: $c-news;
     padding: 60px 0 80px 0;
 }
 
 .news {
-    display: inline-block;
+    @include dib;
+    @include vat;
     margin-right: 10px;
-    vertical-align: top;
     
     &__title {
-        color: #2a2d32;
+        color: $c-back;
         font-size: 24px;
         margin-bottom: 45px;
     }
@@ -232,51 +283,51 @@
         }
         
         &__img {
-            display: inline-block;
-            vertical-align: top;
+            @include dib;
+            @include vat;
             margin-right: 30px;
         }
         
         &__body {
-            display: inline-block;
-            vertical-align: top;
+            @include dib;
+            @include vat;
             width: 370px;
         }
         
         &__title {
-            color: #2a2d32;
+            color: $c-back;
             text-decoration: none;
             font-size: 16px;
             font-weight: bold;
             
             &:hover {
-                color: #248cec;
+                color: $c-link-active;
             }
         }
         
         &__info {
             margin-top: 10px;
             margin-bottom: 25px;
-            color: #9d9d9d;
+            color: $c-info;
         }
         
         &__user {
             text-decoration: none;
-            color: #0187f4;
+            color: $c-user;
         }
         
         &__text {
-            color: #8a8a8a;
+            color: $c-body;
         }
     }
 }
 
 .banner {
-    display: inline-block;
-    vertical-align: top;
+    @include dib;
+    @include vat;
     
     &__title {
-        color: #2a2d32;
+        color: $c-back;
         font-size: 24px;
         margin-bottom: 45px;
     }
@@ -284,23 +335,32 @@
     &__accordion {
         height: 40px;
         width: 550px;
-        border: 1px solid #e8e8e8;
-        color: #2a2d32;
+        border: 1px solid $c-accordion-border;
+        color: $c-back;
         text-transform: uppercase;
-        background: #fff;
+        background: $c-white;
         margin-top: 5px;
+        cursor: pointer;
         
         &:first-child {
             margin-top: 0;
         }
         
         &--open {
-            background: #f4b60d;
+            background: $c-link;
             border-color: transparent;
-            color: #fff;
+            color: $c-white;
             
             .banner__left {
-                border-right: 1px solid #f6c53d; 
+                border-right: 1px solid $c-banner; 
+                
+                &--open {
+                    @include dib;
+                }
+                
+                &--close {
+                    display: none;
+                }
             }
         }
     }
@@ -308,11 +368,15 @@
     &__left {
         float: left;
         width: 34px;
-        border-right: 1px solid #e8e8e8; 
+        border-right: 1px solid $c-accordion-border; 
         height: 38px;
         line-height: 40px;
         text-align: center;
         font-size: 12px;
+        
+        &--open {
+            display: none;
+        }
     }
     
     &__right {
@@ -323,7 +387,8 @@
     &__text {
         width: 550px;
         padding: 25px 0 35px 40px;
-        color: #8a8a8a;
+        color: $c-body;
+        display: none;
     }
 }
 
@@ -342,21 +407,21 @@
 }
 
 .links {
-    background: #2a2d32;
+    background: $c-back;
     padding: 60px 0 85px 0;
     
     &__item {
         width: 255px;
-        display: inline-block;
-        vertical-align: top;
+        @include dib;
+        @include vat;
         margin-right: 40px;
         
         a {
             text-decoration: none;
-            color: #828385;
+            color: $c-link-f;
             
             &:hover {
-                color: #248cec;
+                color: $c-link-active;
             }
         }
         
@@ -366,13 +431,13 @@
     }
     
     &__title {
-        color: #fff;
+        color: $c-white;
         text-transform: uppercase;
         margin-bottom: 33px;
     }
     
     &__list {
-        border-bottom: 1px solid #393c40;
+        border-bottom: 1px solid $c-list;
         list-style: none;
         padding-bottom: 12px;
         padding-top: 12px;
@@ -384,17 +449,17 @@
 }
 
 .footer {
-    background: #35383c;
-    color: #6f7073;
+    background: $c-search;
+    color: $c-footer;
     line-height: 60px;
     
+    a {
+        color: $c-footer;
+        text-decoration: none;
+    }
+    
     > .container > div {
-        display: inline-block;
-        
-        img {
-            margin-right: 10px;
-            vertical-align: middle;
-        }
+        @include dib;
     }
     
     &__phone {
@@ -404,5 +469,29 @@
     
     &__rights {
         float: right;
+    }
+    
+    &--location {
+        background: $sprite -73px -74px $nr;
+        width: 12px;
+        height: 16px;
+        margin-right: 10px;
+        @include dib;
+    }
+    
+    &--phone {
+        background: $sprite -103px -74px $nr;
+        width: 10px;
+        height: 16px;
+        margin-right: 10px;
+        @include dib;
+    }
+    
+    &--mail {
+        background: $sprite -131px -76px $nr;
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+        @include dib;
     }
 }

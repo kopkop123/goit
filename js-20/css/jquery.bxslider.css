@@ -88,7 +88,7 @@
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-	background: url(../img/slider-control.png) 0 -17px no-repeat;
+	background: url(../img/sprite.png) -36px -91px no-repeat;
 	text-indent: -9999px;
 	display: block;
 	width: 15px;
@@ -103,7 +103,7 @@
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-	background: url(../img/slider-control.png) 0 0 no-repeat;
+	background: url(../img/sprite.png) -36px -74px no-repeat;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
