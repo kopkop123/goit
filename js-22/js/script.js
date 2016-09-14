@@ -1,8 +1,8 @@
-$(function() {  
+$(() => {  
     'use strict;'    
     
-    var html = $('#tmp').html();
-    var data = {
+    const html = $('#tmp').html();
+    const data = {
         title: 'Тест по программированию',
         question_1: '1. Вопрос №1',
         answer_1_1: 'Вариант ответа №1',
@@ -17,18 +17,34 @@ $(function() {
         answer_3_2: 'Вариант ответа №2',
         answer_3_3: 'Вариант ответа №3',
         check: 'Проверить мои результаты'
-    }
+    };
     
-    var content = tmpl(html, data);
+    const content = tmpl(html, data);
     
     
-    var test = JSON.stringify(data);
-    var local = localStorage.setItem('info', test);
-    var getlocal = localStorage.getItem('info');
+    const test = JSON.stringify(data);
+    const local = localStorage.setItem('info', test);
+    let getlocal = localStorage.getItem('info');
     getlocal = JSON.parse(getlocal);
     
     $('.template-wrapper').append(content);
     
-    var submit = $('.button_submit');
+    const submit = $('.button_submit');
     submit.check();
+    
+    
+    const app = {
+	pow() {
+    const a = prompt('Введите число', '');
+    const b = prompt('Введите степень', '');
+    
+    let r = a;
+
+    for (let i = 1; i < b; i++) {
+        r *= a;
+    }
+    
+    console.log(r);
+}
+};
 });

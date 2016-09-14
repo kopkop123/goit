@@ -1,9 +1,9 @@
-(function($){
+(($ => {
     $.fn.check = function() {
-        var $body = $('body');
-        var button = this;
-        var overlay;
-        var modal;
+        const $body = $('body');
+        const button = this;
+        let overlay;
+        let modal;
         
         function showModal(e) {
             e.preventDefault();
@@ -44,4 +44,4 @@
         
         button.on('click', showModal);
     }
-})(jQuery);
+}))(jQuery);
