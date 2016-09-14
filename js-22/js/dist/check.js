@@ -6,6 +6,8 @@
         var button = this;
         var overlay = void 0;
         var modal = void 0;
+        var ok = 'Все ответы правильные';
+        var error = 'Тест не пройден';
 
         function showModal(e) {
             e.preventDefault();
@@ -15,13 +17,13 @@
             $body.append(modal);
 
             if ($('#check1').is(':checked') && $('#check5').is(':checked') && $('#check9').is(':checked') && $('#check2').is(':not(:checked)') && $('#check3').is(':not(:checked)') && $('#check4').is(':not(:checked)') && $('#check6').is(':not(:checked)') && $('#check7').is(':not(:checked)') && $('#check8').is(':not(:checked)')) {
-                modal.append('<div>Все ответы правильные</div>');
+                modal.append('<div>' + ok + '</div>');
             } else if ($("input[type=checkbox]").is(':not(:checked)') || $('#check1').is(':not(:checked)') && $('#check2').is(':not(:checked)') && $('#check3').is(':not(:checked)') || $('#check4').is(':not(:checked)') && $('#check5').is(':not(:checked)') && $('#check6').is(':not(:checked)') || $('#check7').is(':not(:checked)') && $('#check8').is(':not(:checked)') && $('#check9').is(':not(:checked)')) {
-                modal.append('<div>Тест не пройден</div>');
+                modal.append('<div>' + error + '</div>');
             } else if ($('#check2').is(':checked') || $('#check3').is(':checked') || $('#check4').is(':checked') || $('#check6').is(':checked') || $('#check7').is(':checked') || $('#check8').is(':checked')) {
-                modal.append('<div>Тест не пройден</div>');
+                modal.append('<div>' + error + '</div>');
             } else {
-                modal.append('<div>Тест не пройден</div>');
+                modal.append('<div>' + error + '</div>');
             };
 
             overlay.one('click', hideModal);
