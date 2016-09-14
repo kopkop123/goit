@@ -31,20 +31,4 @@ $(() => {
     
     const submit = $('.button_submit');
     submit.check();
-    
-    
-    const app = {
-	pow() {
-    const a = prompt('Введите число', '');
-    const b = prompt('Введите степень', '');
-    
-    let r = a;
-
-    for (let i = 1; i < b; i++) {
-        r *= a;
-    }
-    
-    console.log(r);
-}
-};
 });
