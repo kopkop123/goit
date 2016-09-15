@@ -1,4 +1,4 @@
-var app = require('../goit/js-22/js/dist/test.js');
+var app = require('../js-22/js/dist/test.js');
 
 describe("app", function() {
   it("pow", function() {
