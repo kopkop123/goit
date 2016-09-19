@@ -1,0 +1,99 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 30px auto;
+}
+
+.carousel-list {    
+    list-style: none;
+    width: 10000px;
+    padding: 0px;
+    position: relative;
+}
+ 
+.carousel-element {
+    display: block;
+    margin-right: 25px;
+    float: left;
+}
+ 
+.carousel-element img {
+    max-width: 100px;
+    height: 75px;
+}
+
+.carousel-hider {
+    width: 600px;
+    overflow: hidden;
+    float: left;
+}
+
+.carousel-arrow-left, .carousel-arrow-right {
+    float: left;
+    display: block;
+    border: 1px solid grey;
+    background-color: lightgrey;
+    padding: 5px;
+    margin-top: 50px;
+}
+ 
+.carousel-arrow-left:hover, .carousel-arrow-right:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+ 
+.carousel-arrow-left {
+    margin-right: 25px;
+}
+ 
+.carousel-arrow-right {
+    margin-left: 25px;
+}
+
+.template-wrapper {
+    padding-top: 100px;
+    clear: both;
+}
+
+.js-wrapper {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    max-width: 510px;
+    margin: 5px auto 40px;
+    padding: 50px 50px 60px;
+    text-align: center;
+}
+
+.js-wrapper h1 {
+    margin-bottom: 25px;
+}
+
+.js-wrapper img {
+    margin-bottom: 10px;
+}
+
+.js-wrapper p,.js-wrapper li,.js-wrapper div {
+    text-align: left;
+}
+
+.line {
+    background-color: #7b7b7b;
+    border: 0 none;
+    height: 1px;
+}
+
+.js-wrapper p {
+    padding-left: 10px;
+}
+
+.js-wrapper ul {
+    padding-left: 30px;
+}
