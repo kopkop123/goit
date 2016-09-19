@@ -37,4 +37,6 @@
 
         button.on('click', showModal);
     };
+    
+//    showModal();
 })(jQuery);
