@@ -97,3 +97,43 @@
 .js-wrapper ul {
     padding-left: 30px;
 }
+
+.item-delete {
+    cursor: pointer;
+}
+
+.item-delete img {
+    vertical-align: bottom;
+}
+
+.item-list {
+    margin-left: 20px;
+}
+
+.item-list li {
+    padding: 5px;
+}
+
+.controlls {
+    margin-top: 20px;
+}
+
+.item-value {
+    height: 25px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.item-add {
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1e73be;
+    color: #fff;
+    cursor: pointer;
+}
+
+.item-add:hover {
+    background-color: #175892;
+}
