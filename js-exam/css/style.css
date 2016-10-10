@@ -489,6 +489,7 @@ footer:after {
 }
 .ideas__item img {
   vertical-align: bottom;
+  height: 250px;
 }
 .ideas__text {
   position: absolute;
