@@ -66,7 +66,7 @@ $(function(){
 	});
     
     // Поиск 
-    
+    jQuery.support.cors = true;
     var random_image_url = 'http://api.pixplorer.co.uk/image?word=&amount=7&size=tb';
     $.getJSON(random_image_url, function(data){
         if (parseInt(data.count) > 0)
@@ -93,10 +93,23 @@ $(function(){
         $('.search__input').val('');
     });
     
-    $('.ideas__wr').masonry({
+    $('.ideas__wrapper').masonry({
         // options
         itemSelector: '.ideas__item',
         columnWidth: 200,
         gutter: 10
     });
+    
+//    $('.search__btn').on('click', function(e){
+//        e.preventDefault();
+////        $.getJSON('http://api.pixplorer.co.uk/image?word=&amount=7&size=tb', function(data){
+////            console.log(data);
+////            $('.ideas__wrapper').append('<div class="ideas__item"><span class="ideas__text">' + "image.word" +'</span><img src="http://atlasprirodirossii.ru/wp-content/uploads/2012/01/Kukushka-e1453202562371.jpg"></div>');
+////        });
+//        
+//        
+//        
+//    });
+    
+    
 })
