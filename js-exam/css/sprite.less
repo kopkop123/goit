@@ -1,0 +1,155 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@arrow-left-name: 'arrow-left';
+@arrow-left-x: 0px;
+@arrow-left-y: 0px;
+@arrow-left-offset-x: 0px;
+@arrow-left-offset-y: 0px;
+@arrow-left-width: 30px;
+@arrow-left-height: 55px;
+@arrow-left-total-width: 76px;
+@arrow-left-total-height: 71px;
+@arrow-left-image: 'sprite.png';
+@arrow-left: 0px 0px 0px 0px 30px 55px 76px 71px '../img/sprite.png' 'arrow-left';
+@arrow-right-name: 'arrow-right';
+@arrow-right-x: 30px;
+@arrow-right-y: 0px;
+@arrow-right-offset-x: -30px;
+@arrow-right-offset-y: 0px;
+@arrow-right-width: 30px;
+@arrow-right-height: 55px;
+@arrow-right-total-width: 76px;
+@arrow-right-total-height: 71px;
+@arrow-right-image: 'sprite.png';
+@arrow-right: 30px 0px -30px 0px 30px 55px 76px 71px '../img/sprite.png' 'arrow-right';
+@bulb-name: 'bulb';
+@bulb-x: 60px;
+@bulb-y: 33px;
+@bulb-offset-x: -60px;
+@bulb-offset-y: -33px;
+@bulb-width: 13px;
+@bulb-height: 16px;
+@bulb-total-width: 76px;
+@bulb-total-height: 71px;
+@bulb-image: 'sprite.png';
+@bulb: 60px 33px -60px -33px 13px 16px 76px 71px '../img/sprite.png' 'bulb';
+@cup-name: 'cup';
+@cup-x: 60px;
+@cup-y: 0px;
+@cup-offset-x: -60px;
+@cup-offset-y: 0px;
+@cup-width: 16px;
+@cup-height: 17px;
+@cup-total-width: 76px;
+@cup-total-height: 71px;
+@cup-image: 'sprite.png';
+@cup: 60px 0px -60px 0px 16px 17px 76px 71px '../img/sprite.png' 'cup';
+@plane-name: 'plane';
+@plane-x: 0px;
+@plane-y: 55px;
+@plane-offset-x: 0px;
+@plane-offset-y: -55px;
+@plane-width: 17px;
+@plane-height: 16px;
+@plane-total-width: 76px;
+@plane-total-height: 71px;
+@plane-image: 'sprite.png';
+@plane: 0px 55px 0px -55px 17px 16px 76px 71px '../img/sprite.png' 'plane';
+@tv-name: 'tv';
+@tv-x: 60px;
+@tv-y: 17px;
+@tv-offset-x: -60px;
+@tv-offset-y: -17px;
+@tv-width: 16px;
+@tv-height: 16px;
+@tv-total-width: 76px;
+@tv-total-height: 71px;
+@tv-image: 'sprite.png';
+@tv: 60px 17px -60px -17px 16px 16px 76px 71px '../img/sprite.png' 'tv';
+@spritesheet-width: 76px;
+@spritesheet-height: 71px;
+@spritesheet-image: 'sprite.png';
+@spritesheet-sprites: @arrow-left @arrow-right @bulb @cup @plane @tv;
+@spritesheet: 76px 71px 'sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+    background-repeat: no-repeat;
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}
